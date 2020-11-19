@@ -1,11 +1,9 @@
 const redis = require('redis')
-const { redisPath } = 'process.env.redisPath'
+
 
 module.exports = async () => {
     return await new Promise((resolve ,reject) => {
-        const client = redis.createClient({
-            url: redisPath
-        })
+        const client = redis.createClient(process.env.redisPath)
 
         client.on('error', (err) => {
             console.log('Redis Error:', err)
