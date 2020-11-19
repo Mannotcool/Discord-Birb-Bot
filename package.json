@@ -1,0 +1,22 @@
+{
+  "name": "birb-bot",
+  "version": "1.1.0",
+  "description": "A mostly moderation discord bot",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main.js"
+  },
+  "keywords": [
+    "bot",
+    "discord",
+    "cool"
+  ],
+  "author": "Mannotcool",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "discord.js": "^12.4.1",
+    "mongoose": "^5.10.15",
+    "redis": "^3.0.2"
+  }
+}
+
