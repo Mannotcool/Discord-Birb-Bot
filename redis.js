@@ -9,8 +9,8 @@ const { redisport } = 'process.env.redisport'
 module.exports = async () => {
     return await new Promise((resolve ,reject) => {
         const client = redis.createClient({
-        port: redisport
-        url: redpath
+        port: redisport,
+        url: redpath,
         password: redispass
       })
 
