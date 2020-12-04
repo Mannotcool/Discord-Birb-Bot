@@ -1,5 +1,5 @@
 const redis = require('redis')
-const url = require('url');
+const { redisPath } = 'process.env.redisPath'
 
 
 
@@ -8,7 +8,7 @@ module.exports = async () => {
     return await new Promise((resolve ,reject) => {
      let Client
       if(process.env.redisPath){
-        let redisURL = url.parse(process.env.redisPath);
+        Client = redis.createClient(process.env.redisPath)
         Client = redis.createClient(redisURL)
       } else {
         Client = redis.createClient()
