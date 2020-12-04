@@ -1,18 +1,18 @@
 const redis = require('redis')
-const { redisPath } = 'process.env.redisPath'
+const { redpath } = 'process.env.redpath'
+const { redispass } = 'process.env.redisPath'
+const { redisport } = 'process.env.redisport'
 
 
 
 
 module.exports = async () => {
     return await new Promise((resolve ,reject) => {
-     let Client
-      if(process.env.redisPath){
-        Client = redis.createClient(process.env.redisPath)
-        Client = redis.createClient(redisURL)
-      } else {
-        Client = redis.createClient()
-      }
+        const client = redis.createClient({
+        port: redisport
+        host: redpath
+        password: redispass
+      })
 
         client.on('error', (err) => {
             console.log('Redis Error:', err)
