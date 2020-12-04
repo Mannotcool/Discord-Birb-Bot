@@ -1,6 +1,6 @@
 const redis = require('redis')
 const { redpath } = 'process.env.redpath'
-const { redispass } = 'process.env.redisPath'
+const { redispass } = 'process.env.redispass'
 const { redisport } = 'process.env.redisport'
 
 
