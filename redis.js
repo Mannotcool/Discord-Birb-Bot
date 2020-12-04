@@ -37,6 +37,10 @@ module.exports.expire = (callback) => {
       })
     }
   
-    const pub = redis.createClient({ url: redisPath })
+    const pub = redis.createClient({
+        port: redisport,
+        url: redpath,
+        password: redispass
+      })
     pub.send_command('config', ['set', 'notify-keyspace-events', 'Ex'], expired())
   }
