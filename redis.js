@@ -10,7 +10,7 @@ module.exports = async () => {
     return await new Promise((resolve ,reject) => {
         const client = redis.createClient({
         port: redisport
-        host: redpath
+        url: redpath
         password: redispass
       })
 
